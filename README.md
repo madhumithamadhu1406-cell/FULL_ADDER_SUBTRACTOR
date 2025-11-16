@@ -43,13 +43,25 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+module full_adder (
+    input  wire a, b, cin,   // Inputs
+    output wire sum, carry   // Outputs
+);
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+    // Logic equations
+    assign sum   = a ^ b ^ cin;                  // XOR for sum
+    assign carry = (a & b) | (b & cin) | (a & cin); // Majority function for carry
+
+endmodule
+
+ Developed by:Madhumitha V
+ RegisterNumber:25016067
 
 **RTL Schematic**
+<img width="1919" height="1072" alt="Screenshot 2025-11-16 114712" src="https://github.com/user-attachments/assets/0a58a54f-d1d4-4793-8628-963de9e1cf60" />
 
 **Output Timing Waveform**
+<img width="1919" height="1072" alt="Screenshot 2025-11-16 115031" src="https://github.com/user-attachments/assets/aa322dcb-f5f3-43db-9910-1eda808b8513" />
 
 **Result:**
 
